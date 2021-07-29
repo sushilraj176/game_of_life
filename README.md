@@ -22,4 +22,6 @@ The initial pattern constitutes the seed of the system. The first generation is 
 live or dead; births and deaths occur simultaneously, and the discrete moment at which this happens is sometimes called a tick. Each generation is a pure function 
 of the preceding one. The rules continue to be applied repeatedly to create further generations.
 
-Have fun:
+Link: https://sushilraj176.github.io/game_of_life/
+
+Have fun..
