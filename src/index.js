@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './App.css';
+import './index.css';
 import { ButtonToolbar, Dropdown, DropdownButton } from 'react-bootstrap';
 
 class Box extends React.Component {
@@ -108,7 +108,7 @@ class Main extends React.Component {
 			gridFull: Array(this.rows).fill().map(() => Array(this.cols).fill(false))
 		}
 	}
-
+//methods logic
 	selectBox = (row, col) => {
 		let gridCopy = arrayClone(this.state.gridFull);
 		gridCopy[row][col] = !gridCopy[row][col];
@@ -175,7 +175,7 @@ class Main extends React.Component {
 		this.clear();
 
 	}
-
+//game logic
 	play = () => {
 		let g = this.state.gridFull;
 		let g2 = arrayClone(this.state.gridFull);
@@ -183,6 +183,7 @@ class Main extends React.Component {
 		for (let i = 0; i < this.rows; i++) {
 		  for (let j = 0; j < this.cols; j++) {
 		    let count = 0;
+			//calculating neighbors
 		    if (i > 0) if (g[i - 1][j]) count++;
 		    if (i > 0 && j > 0) if (g[i - 1][j - 1]) count++;
 		    if (i > 0 && j < this.cols - 1) if (g[i - 1][j + 1]) count++;
